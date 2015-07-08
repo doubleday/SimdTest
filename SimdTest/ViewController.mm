@@ -24,6 +24,11 @@
     return self;
 }
 
+- (void)awakeFromNib
+{
+    self.testController = new TestController();
+}
+
 - (void)dealloc
 {
     delete self.testController;

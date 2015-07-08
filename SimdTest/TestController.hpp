@@ -66,14 +66,14 @@ public:
         TestRunner<Implementer>::addTest1(_buffers[0], _buffers[1], _buffers[2], _blockSize, _numTestRuns);
         
         return (double) duration_cast<nanoseconds>(high_resolution_clock::now() - start).count() /
-                        duration_cast<nanoseconds>(seconds(1)).count();
+                        duration_cast<nanoseconds>(milliseconds(1)).count();
     }
 
 private:
 
     void initBuffers()
     {
-        for (auto buffer : _buffers)
+        for (auto& buffer : _buffers)
         {
             posix_memalign((void**)&buffer, 4 * sizeof(float), _blockSize * sizeof(float));
         }
