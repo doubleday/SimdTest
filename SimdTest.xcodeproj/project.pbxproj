@@ -9,11 +9,12 @@
 /* Begin PBXBuildFile section */
 		65520B581B49595D005E50A1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 65520B571B49595D005E50A1 /* main.m */; };
 		65520B5B1B49595D005E50A1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 65520B5A1B49595D005E50A1 /* AppDelegate.m */; };
-		65520B5E1B49595D005E50A1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65520B5D1B49595D005E50A1 /* ViewController.m */; };
+		65520B5E1B49595D005E50A1 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 65520B5D1B49595D005E50A1 /* ViewController.mm */; };
 		65520B611B49595D005E50A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65520B5F1B49595D005E50A1 /* Main.storyboard */; };
 		65520B631B49595D005E50A1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65520B621B49595D005E50A1 /* Images.xcassets */; };
 		65520B661B49595D005E50A1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65520B641B49595D005E50A1 /* LaunchScreen.xib */; };
 		65520B721B49595D005E50A1 /* SimdTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 65520B711B49595D005E50A1 /* SimdTestTests.m */; };
+		657559091B4ADE9A00EBCB3D /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 657559081B4ADE9A00EBCB3D /* Accelerate.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,13 +34,20 @@
 		65520B591B49595D005E50A1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		65520B5A1B49595D005E50A1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		65520B5C1B49595D005E50A1 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		65520B5D1B49595D005E50A1 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		65520B5D1B49595D005E50A1 /* ViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
 		65520B601B49595D005E50A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		65520B621B49595D005E50A1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		65520B651B49595D005E50A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		65520B6B1B49595D005E50A1 /* SimdTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimdTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		65520B701B49595D005E50A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		65520B711B49595D005E50A1 /* SimdTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimdTestTests.m; sourceTree = "<group>"; };
+		65520B7D1B495B80005E50A1 /* TestController.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TestController.hpp; sourceTree = "<group>"; };
+		65520B7E1B495D02005E50A1 /* SequentialOps.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = SequentialOps.hpp; sourceTree = "<group>"; };
+		657559071B4ADE8A00EBCB3D /* VDSPLibOps.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = VDSPLibOps.hpp; sourceTree = "<group>"; };
+		657559081B4ADE9A00EBCB3D /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		65820D881B4A7BBA0087CCF5 /* NovaSimdOps.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = NovaSimdOps.hpp; sourceTree = "<group>"; };
+		6590B2341B4C0C1600DC7B89 /* SimdppOps.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = SimdppOps.hpp; sourceTree = "<group>"; };
+		6590B2361B4C392E00DC7B89 /* TestRunner.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TestRunner.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				657559091B4ADE9A00EBCB3D /* Accelerate.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +72,7 @@
 		65520B491B49595D005E50A1 = {
 			isa = PBXGroup;
 			children = (
+				657559081B4ADE9A00EBCB3D /* Accelerate.framework */,
 				65520B541B49595D005E50A1 /* SimdTest */,
 				65520B6E1B49595D005E50A1 /* SimdTestTests */,
 				65520B531B49595D005E50A1 /* Products */,
@@ -84,11 +94,17 @@
 				65520B591B49595D005E50A1 /* AppDelegate.h */,
 				65520B5A1B49595D005E50A1 /* AppDelegate.m */,
 				65520B5C1B49595D005E50A1 /* ViewController.h */,
-				65520B5D1B49595D005E50A1 /* ViewController.m */,
+				65520B5D1B49595D005E50A1 /* ViewController.mm */,
 				65520B5F1B49595D005E50A1 /* Main.storyboard */,
 				65520B621B49595D005E50A1 /* Images.xcassets */,
 				65520B641B49595D005E50A1 /* LaunchScreen.xib */,
 				65520B551B49595D005E50A1 /* Supporting Files */,
+				65520B7D1B495B80005E50A1 /* TestController.hpp */,
+				65520B7E1B495D02005E50A1 /* SequentialOps.hpp */,
+				65820D881B4A7BBA0087CCF5 /* NovaSimdOps.hpp */,
+				657559071B4ADE8A00EBCB3D /* VDSPLibOps.hpp */,
+				6590B2341B4C0C1600DC7B89 /* SimdppOps.hpp */,
+				6590B2361B4C392E00DC7B89 /* TestRunner.hpp */,
 			);
 			path = SimdTest;
 			sourceTree = "<group>";
@@ -219,7 +235,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				65520B5E1B49595D005E50A1 /* ViewController.m in Sources */,
+				65520B5E1B49595D005E50A1 /* ViewController.mm in Sources */,
 				65520B5B1B49595D005E50A1 /* AppDelegate.m in Sources */,
 				65520B581B49595D005E50A1 /* main.m in Sources */,
 			);
@@ -349,8 +365,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"libs/nova-simd/include/",
+					"\"$(SRCROOT)/libs/simdpp/include\"",
+				);
 				INFOPLIST_FILE = SimdTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LLVM_LTO = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -359,8 +384,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
+				"GCC_PREPROCESSOR_DEFINITIONS[arch=*]" = SIMDPP_ARCH_NEON;
+				"GCC_PREPROCESSOR_DEFINITIONS[sdk=iphonesimulator*]" = SIMDPP_ARCH_X86_SSE2;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"libs/nova-simd/include/",
+					"\"$(SRCROOT)/libs/simdpp/include\"",
+				);
 				INFOPLIST_FILE = SimdTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LLVM_LTO = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -418,6 +454,7 @@
 				65520B771B49595D005E50A1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		65520B781B49595D005E50A1 /* Build configuration list for PBXNativeTarget "SimdTestTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +463,7 @@
 				65520B7A1B49595D005E50A1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
