@@ -59,18 +59,24 @@ public:
     template <OpsImplementer implementer>
     double runTestAdd1()
     {
-        using namespace std::chrono;
-        using Implementer = typename ImplementerTrait<implementer>::Implenter;
-        
-        auto start = high_resolution_clock::now();
-        TestRunner<Implementer>::addTest1(_buffers[0], _buffers[1], _buffers[2], _blockSize, _numTestRuns);
-        
-        return (double) duration_cast<nanoseconds>(high_resolution_clock::now() - start).count() /
-                        duration_cast<nanoseconds>(milliseconds(1)).count();
+        return timed([this]() {
+            using Implementer = typename ImplementerTrait<implementer>::Implenter;
+            TestRunner<Implementer>::addTest1(_buffers[0], _buffers[1], _buffers[2], _blockSize, _numTestRuns);
+        });
     }
 
 private:
-
+    
+    template <typename Callable>
+    double timed(Callable c)
+    {
+        using namespace std::chrono;
+        auto start = high_resolution_clock::now();
+        c();
+        return (double) duration_cast<nanoseconds>(high_resolution_clock::now() - start).count() /
+        duration_cast<nanoseconds>(milliseconds(1)).count();
+    }
+    
     void initBuffers()
     {
         for (auto& buffer : _buffers)

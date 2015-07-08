@@ -34,8 +34,10 @@ public:
     
     static void fill(float* dest, float value, size_t count)
     {
-        for (auto i = 0; i < count; ++i) {
-            dest[i] = value;
+        vec<float> v(value);
+        for (int i = 0; i < count; i += 4)
+        {
+            v.store_aligned(dest + i);
         }
     }
 
